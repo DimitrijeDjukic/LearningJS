@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    
+    <script>
+/*
+         rekurzija
+        function findSolution(target) {
+            function find(curr, his) {
+                if(curr == target) {
+                    return his;
+                } else if (curr > target) {
+                    return null;
+                } else { 
+                    return  find(curr + 5, `(${his} + 5)`) ||
+                            find(curr * 3, `(${his} * 3)`);
+                }
+            }
+            return find(1, "1");
+
+        }
+        console.log(findSolution(13));
+
+        
+
+
+        function countChar(string, ch){
+
+            let counted = 0;
+            for(let y = 0; y < string.length; y++) {
+                if(string[y] == ch) {
+                    counted += 1
+                }
+            }
+            return counted;
+        }
+
+        function countBs(string) {
+            return countChar(string, "B");
+        }
+        console.log(countBs("HALBBBAMABBA"));
+
+        
+
+        function doMath(num) {
+
+     
+            if(num) {
+                
+                return ((num + 10) / 3);
+            } else {
+                return false;
+            }
+        }
+        
+        var customNum = doMath(dim);
+        console.log(customNum);
+        
+
+        function $(id) {
+            console.log("Id is:", id)
+            return document.getElementById(id);
+        }
+
+        var title = $("title");
+        title.innerHTML = "New Text";
+
+    
+
+    function ctF(c_num) {
+        return ((c_num * 1.8) + 32);
+    }
+
+    var num = ctF(30);
+    console.log(num)
+    
+
+    function bill(price, tip = (price * 0.10)) {
+        tip = tip / 100;
+        tip = tip * price
+        total = price + tip
+        return total
+
+    }
+
+    var first = bill(25, 10);
+    console.log(first);
+
+    var second = bill(2, 0);
+    console.log(second);
+
+    var third = bill(100);
+    console.log(third);
+
+    //tip calculator
+     function clickMe() {
+            var bill = Number(document.querySelector(".bill").value)
+            var tip = Number(document.querySelector(".tip").value)
+            //var bill = Number(billl.value)
+            //var tip = Number(tipp.value)
+            var finalTip = tip / 100 //(10%)-->0.1
+            var totalTip = finalTip * bill //(100$)-->0.1*100 = 10
+            var totalBill = totalTip + bill
+            console.log(totalTip.toFixed(2),"$")
+            console.log(totalBill.toFixed(2), "$")
+    }
+
+   */
+    
+    </script>
+
+   
+    <button class="btn btn-primary btn-lg js-button">CLICK ME</button>
+    <h1 id="numOfClicks"></h1>
+
+    <script>
+      
+        var numOfClicks = 0
+        var btn = document.querySelector(".js-button")
+    
+        function addClicks(event) {
+
+            numOfClicks++
+            document.getElementById("numOfClicks").innerText = numOfClicks;
+        }
+        btn.addEventListener('click', addClicks)
+
+        
+      
+    </script>
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
