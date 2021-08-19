@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>    
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1> Styling CSS </h1>
+
+    <div>
+        <label for="bgColor">Background color</label>
+        <input type="text" class="form-control js-bg-color" id="bgColor">
+      </div>
+       
+    <div>
+        <label>Text color</label>
+        <input type="text" class="form-control js-text-color" style='padding: 30px;
+        font-size: 30px;'>
+    </div>
+
+    <div>
+        <label>Page font size</label>
+        <input type="text" class="form-control js-font-size" style='padding: 30px;
+        font-size: 30px;'>
+    </div>
+
+
+    <script>
+
+        var bgColor = document.querySelector(".js-bg-color")
+        var textColor = document.querySelector(".js-text-color")
+        var fontSize = document.querySelector(".js-font-size")
+        var body = document.querySelector("body")
+
+        function changeBgColor(event) {
+            body.style.backgroundColor = event.target.value
+        }
+
+        function changeTextColor(event) {
+            body.style.color = event.target.value
+        }
+
+        function changeFontSize(event) {
+            body.style.fontSize = event.target.value
+        }
+      
+        bgColor.addEventListener("keyup", changeBgColor)
+        textColor.addEventListener("keyup", changeTextColor)
+        fontSize.addEventListener("keyup", changeFontSize)
+        
+      
+    </script>
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
