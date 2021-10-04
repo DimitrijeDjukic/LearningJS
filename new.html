@@ -12,53 +12,27 @@
 <body>
 
 
-    <div class="modal js-modal">
-        <h1 class="js-modal-title">Modal</h1>
-        <p class="js-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-
-    <button class="button-js">Open</button>
-
-    <button class="button-js-close">Close</button>
+    
     
     <script>
+
+        let luke = {};
       
-       
-
-        class Modal {
-            constructor() {
-                this.modal = document.querySelector(".js-modal");
-            }
-            open() {
-                this.modal.style.display = 'initial';
-            }
-            close() {
-                this.modal.style.display = 'none';
-            }
-            changeContent(title, text) {
-                if(title !== undefined) {
-                    this.modal.querySelector(".js-modal-title").innerText = title
-                }
-                if(text !== undefined) {
-                    this.modal.querySelector(".js-modal-text").innerText = text
-                }
-            }
-        }
-        
-        const openBtn = document.querySelector(".button-js");
-        const closeBtn = document.querySelector(".button-js-close");
-        const modal = new Modal();
-
-
-        openBtn.addEventListener('click', function(event) {
-            modal.open()
-        })
-    
-       
-        closeBtn.addEventListener('click', function(event) {
-            modal.close()
-        })
-
+        console.log("before")
+        fetch('https://swapi.dev/api/people/1/')
+            .then(function(response) {
+                return response.json()
+               
+            })
+            .then(function(res) {
+                luke = res
+                // const [mov1, mov2, ...movies] = luke.films
+                // console.log(movies)
+               luke.films.forEach(function(url, index) {
+                   console.log(index, url)
+               })
+            })
+        console.log("after_after")
 
 
 
@@ -66,7 +40,7 @@
     
 
 
-    
+     
 
 
 
